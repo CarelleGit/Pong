@@ -9,6 +9,7 @@ TagManager:
   - Goal
   - Paddle
   - RightPaddle
+  - Lgoal
   layers:
   - Default
   - TransparentFX

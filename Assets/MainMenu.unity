@@ -108,6 +108,22 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &42301481 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1785830575851266, guid: 6490d56967857524ba2704b666f65777,
+    type: 2}
+  m_PrefabInternal: {fileID: 1712321520}
+--- !u!114 &42301482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 42301481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f916db70daa96540a973782a9b86082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &861810422
 GameObject:
   m_ObjectHideFlags: 0

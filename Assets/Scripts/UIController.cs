@@ -11,11 +11,20 @@ public class UIController : MonoBehaviour
     public Player player;
     public BallScript ball;
 
+    Score score;
+
+    int lScore;
+    int rScore;
+
     public GameObject canvas;
+    public GameObject tallyPanel;
+
+
     // Use this for initialization
     void Start()
     {
-
+        lScore = score.lScore;
+        rScore = score.rScore;
     }
 
     // Update is called once per frame
@@ -30,15 +39,28 @@ public class UIController : MonoBehaviour
         if (Input.GetKey(KeyCode.P))
         {
             canvas.SetActive(true);
-            if (canvas.active == true)
-            {
                 Time.timeScale = 0;
-            }
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Time.timeScale = 1;
             canvas.SetActive(false);
+        }
+        if (canvas.activeInHierarchy == false)
+        {
+            if (lScore < 7 || rScore < 7)
+            {
+                if (Input.GetKey(KeyCode.T))
+                {
+                    tallyPanel.SetActive(true);
+                    Time.timeScale = 0.5f;
+                }
+                if (!Input.GetKey(KeyCode.T))
+                {
+                    tallyPanel.SetActive(false);
+                    Time.timeScale = 1;
+                }
+            }
         }
     }
 }
